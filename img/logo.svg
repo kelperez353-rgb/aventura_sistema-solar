@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 60" width="100%" height="100%">
+  <!-- Icono espacial a la izquierda -->
+  <g transform="translate(30, 30)">
+    <!-- Planeta base morado/dorado -->
+    <ellipse cx="0" cy="0" rx="26" ry="6" fill="none" stroke="#FFD166" stroke-width="3" transform="rotate(-25)"/>
+    <circle cx="0" cy="0" r="15" fill="#5B4BCE"/>
+    <circle cx="-4" cy="-4" r="11" fill="#7565E6"/>
+    <path d="M -24 0 A 26 6 0 0 0 24 0" fill="none" stroke="#FFD166" stroke-width="3" transform="rotate(-25)"/>
+    <!-- Estrellita amarilla -->
+    <polygon points="18,-14 20,-10 24,-8 20,-6 18,-2 16,-6 12,-8 16,-10" fill="#FFD166"/>
+  </g>
+
+  <!-- Texto del Logo -->
+  <text x="68" y="27" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="900" font-size="16" fill="#FFFFFF" letter-spacing="0.5">AVENTURA POR EL</text>
+  <text x="68" y="46" font-family="'Segoe UI', Roboto, Helvetica, Arial, sans-serif" font-weight="900" font-size="19" fill="#FFD166" letter-spacing="0.8">SISTEMA SOLAR</text>
+</svg>

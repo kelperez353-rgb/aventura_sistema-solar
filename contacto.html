@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Comunícate con el Centro de Control de la Aventura por el Sistema Solar. Formulario para estudiantes, docentes y padres de familia.">
+  <meta name="author" content="Kelsy Pérez">
+  <title>Aventura por el Sistema Solar | Contacto</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ======================================================================
+       ENCABEZADO Y BARRA DE NAVEGACIÓN
+       ====================================================================== -->
+  <header class="header-principal">
+    <div class="contenedor-nav">
+      <a href="index.html" class="logo-sitio" title="Inicio - Aventura por el Sistema Solar">
+        <img src="img/icono-planeta.svg" alt="Icono del Sistema Solar con anillos" width="46" height="46">
+        <div class="logo-texto">
+          <span class="logo-subtitulo-blanco">Aventura por el</span>
+          <span class="logo-titulo-amarillo">Sistema Solar</span>
+        </div>
+      </a>
+
+      <nav aria-label="Navegación principal">
+        <ul class="menu-navegacion">
+          <li><a href="index.html">🏠 Inicio</a></li>
+          <li><a href="planetas.html">🪐 Planetas</a></li>
+          <li><a href="galeria.html">🖼️ Galería</a></li>
+          <li><a href="evaluacion.html">⭐ Evalúate</a></li>
+          <li><a href="contacto.html" class="active">✉️ Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ======================================================================
+       CONTENIDO PRINCIPAL
+       ====================================================================== -->
+  <main class="main-contenido">
+
+    <!-- HERO DE LA SECCIÓN -->
+    <section class="hero-banner" aria-label="Introducción a la base de contacto">
+      <div class="hero-texto">
+        <span class="hero-etiqueta">Transmisión de Radio</span>
+        <h1>Centro de Control Espacial</h1>
+        <p>
+          ¿Tienes alguna duda sobre los planetas, eres docente y deseas sugerir un tema 
+          o quieres enviar un saludo desde tu escuela? ¡Sintoniza tu antena y envíanos una señal! 
+          La tripulación de la base te responderá a la velocidad de la luz.
+        </p>
+      </div>
+      <div class="hero-imagen">
+        <img src="img/icono-contacto.svg" alt="Sobre con carta comunicándose con la base">
+      </div>
+    </section>
+
+    <!-- FORMULARIO DE CONTACTO -->
+    <section class="seccion-bloque" aria-labelledby="titulo-form-contacto">
+      <h2 id="titulo-form-contacto">Envía tu Mensaje a la Base Terrestre</h2>
+      <p>
+        Completa los campos a continuación para establecer comunicación directa con nuestro equipo educativo:
+      </p>
+
+      <div class="formulario-contenedor">
+        <form action="#" method="post" class="formulario-espacial" id="form-contacto">
+
+          <!-- FIELDSET 1: IDENTIFICACIÓN DEL REMITENTE -->
+          <fieldset>
+            <legend>📡 Datos del Emisor de la Señal</legend>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem;">
+              <div class="campo-grupo">
+                <label for="nombre-contacto">Nombre Completo: <span style="color: var(--color-amarillo);">*</span></label>
+                <input type="text" id="nombre-contacto" name="nombre_contacto" class="input-control" placeholder="Ej. Carlos Mendoza" required>
+              </div>
+
+              <div class="campo-grupo">
+                <label for="correo-contacto">Correo Electrónico: <span style="color: var(--color-amarillo);">*</span></label>
+                <input type="email" id="correo-contacto" name="correo_contacto" class="input-control" placeholder="nombre@escuela.edu" required>
+              </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 1.5rem; margin-top: 1rem;">
+              <div class="campo-grupo">
+                <label for="telefono-contacto">Teléfono o Celular (Opcional):</label>
+                <input type="tel" id="telefono-contacto" name="telefono_contacto" class="input-control" placeholder="+507 6000-0000">
+              </div>
+
+              <div class="campo-grupo">
+                <label for="rol-contacto">¿Quién eres en esta misión?</label>
+                <select id="rol-contacto" name="rol_contacto" class="select-control" required>
+                  <option value="">-- Elige tu rol --</option>
+                  <option value="estudiante" selected>👨‍🚀 Estudiante de Primaria (4.° Grado)</option>
+                  <option value="docente">👩‍🏫 Docente / Maestro de Ciencias</option>
+                  <option value="padre">👨‍👧 Padre o Madre de Familia</option>
+                  <option value="aficionado">🔭 Entusiasta de la Astronomía</option>
+                  <option value="otro">🛸 Otro explorador espacial</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="campo-grupo" style="margin-top: 1rem;">
+              <label for="escuela-contacto">Nombre de tu Escuela o Colegio:</label>
+              <input type="text" id="escuela-contacto" name="escuela_contacto" class="input-control" placeholder="Ej. Escuela Primaria República de Panamá">
+            </div>
+          </fieldset>
+
+          <!-- FIELDSET 2: DETALLES DEL MENSAJE -->
+          <fieldset>
+            <legend>💬 Contenido de la Transmisión</legend>
+
+            <div class="campo-grupo">
+              <label for="asunto-contacto">Motivo del Contacto: <span style="color: var(--color-amarillo);">*</span></label>
+              <select id="asunto-contacto" name="asunto_contacto" class="select-control" required>
+                <option value="">-- Selecciona el asunto --</option>
+                <option value="pregunta_planeta">Pregunta o duda sobre un planeta</option>
+                <option value="pregunta_luna">Duda sobre las fases de la Luna</option>
+                <option value="sugerencia_profesor">Sugerencia pedagógica para la clase</option>
+                <option value="felicitacion">Felicitación al equipo de la misión</option>
+                <option value="reporte">Reportar un error técnico en el sitio web</option>
+                <option value="otro">Otro motivo</option>
+              </select>
+            </div>
+
+            <div class="campo-grupo">
+              <label>Prioridad de la Comunicación:</label>
+              <div style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
+                <label class="opcion-label" style="flex: 1 1 180px;">
+                  <input type="radio" name="prioridad" value="normal" checked>
+                  <span>🟢 Normal</span>
+                </label>
+                <label class="opcion-label" style="flex: 1 1 180px;">
+                  <input type="radio" name="prioridad" value="media">
+                  <span>🟡 Consulta de Clase</span>
+                </label>
+                <label class="opcion-label" style="flex: 1 1 180px;">
+                  <input type="radio" name="prioridad" value="urgente">
+                  <span>🔴 Alerta Espacial</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="campo-grupo" style="margin-top: 1rem;">
+              <label for="mensaje-contacto">Mensaje para el Centro de Control: <span style="color: var(--color-amarillo);">*</span></label>
+              <textarea id="mensaje-contacto" name="mensaje_contacto" class="textarea-control" placeholder="Escribe aquí tu mensaje, duda o sugerencia con total detalle..." required></textarea>
+            </div>
+
+            <div class="campo-grupo">
+              <label class="opcion-label">
+                <input type="checkbox" name="suscripcion_boletin" value="si" checked>
+                <span>¡Sí! Deseo recibir el "Boletín Cósmico Mensual" con noticias sobre eclipses y lluvias de estrellas. ⭐</span>
+              </label>
+            </div>
+          </fieldset>
+
+          <!-- BOTONES DE ACCIÓN -->
+          <div class="acciones-formulario">
+            <button type="reset" class="btn-pill btn-pill-amarillo">🔄 Borrar Formulario</button>
+            <button type="submit" class="btn-pill btn-pill-azul">📡 Enviar Transmisión Espacial</button>
+          </div>
+
+        </form>
+      </div>
+    </section>
+
+    <!-- INFORMACIÓN INSTITUCIONAL DE CONTACTO Y HORARIOS -->
+    <section class="seccion-bloque" aria-labelledby="titulo-info-base">
+      <h2 id="titulo-info-base">Ubicación de la Base Terrestre</h2>
+      
+      <div class="grid-tarjetas">
+        <article class="tarjeta">
+          <div class="tarjeta-icono">
+            <span style="font-size: 3rem;">🏫</span>
+          </div>
+          <h3>Sede Académica</h3>
+          <p>
+            <strong>Creadora del sitio: Kelsy Pérez</strong><br>
+            <strong>Universidad de Panamá</strong><br>
+            Centro Regional Universitario de Veraguas (CRUV)<br>
+            Facultad de Informática, Electrónica y Comunicación (FIEC)<br>
+            Asignatura: Tecnología Web I
+          </p>
+        </article>
+
+        <article class="tarjeta">
+          <div class="tarjeta-icono">
+            <span style="font-size: 3rem;">⏰</span>
+          </div>
+          <h3>Horario de Transmisión</h3>
+          <p>
+            <strong>Lunes a Viernes:</strong><br>
+            8:00 a.m. – 4:00 p.m.<br>
+            <strong>Atención a Escuelas Primarias:</strong><br>
+            Jornadas matutinas y vespertinas coordinadas con los docentes de ciencias.
+          </p>
+        </article>
+
+        <article class="tarjeta">
+          <div class="tarjeta-icono">
+            <span style="font-size: 3rem;">✉️</span>
+          </div>
+          <h3>Canales de Radiofrecuencia</h3>
+          <p>
+            <strong>Correo de la Misión:</strong><br>
+            <a href="mailto:kelperez353@gmail.com">kelperez353@gmail.com</a><br><br>
+            <strong>Línea Cósmica Escolar:</strong><br>
+            <a href="tel:+50769547750">+507 6954-7750</a>
+          </p>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================================================================
+       PIE DE PÁGINA
+       ====================================================================== -->
+  <footer class="footer-landing">
+    <div class="footer-landing-barra">
+      <div class="footer-izq">
+        <img src="img/icono-planeta.svg" alt="Saturno miniatura">
+        <span>Aventura por el Sistema Solar</span>
+      </div>
+      <div class="footer-centro">
+        ★ ¡El universo también es tuyo! ★
+      </div>
+      <div class="footer-der">
+        <span>🪐 4.° grado | 9 a 10 años</span>
+      </div>
+    </div>
+    <div class="footer-acreditacion">
+      <p>
+        Proyecto Integrador de Tecnología Web I | Facultad de Informática, Electrónica y Comunicación | Universidad de Panamá (CRUV) — 2026.
+      </p>
+      <p>
+        Sitio desarrollado por <strong>Kelsy Pérez</strong> | <a href="mailto:kelperez353@gmail.com">kelperez353@gmail.com</a> | <a href="tel:+50769547750">+507 6954-7750</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

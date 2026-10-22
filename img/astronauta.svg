@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 130" width="100%" height="100%">
+  <defs>
+    <linearGradient id="astroVisor" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFD166"/>
+      <stop offset="50%" stop-color="#F77F00"/>
+      <stop offset="100%" stop-color="#5B4BCE"/>
+    </linearGradient>
+    <radialGradient id="starGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#FFD166"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Estrellitas brillantes alrededor -->
+  <polygon points="15,20 18,26 24,29 18,32 15,38 12,32 6,29 12,26" fill="#FFD166"/>
+  <polygon points="105,30 107,35 112,37 107,39 105,44 103,39 98,37 103,35" fill="#FFD166"/>
+  <polygon points="18,90 20,94 24,95 20,97 18,101 16,97 12,95 16,94" fill="#FFD166" opacity="0.8"/>
+
+  <!-- Mochila de soporte vital (Jetpack) -->
+  <rect x="36" y="44" width="48" height="42" rx="10" fill="#4A5568"/>
+  <rect x="42" y="48" width="14" height="24" rx="4" fill="#718096"/>
+  <rect x="64" y="48" width="14" height="24" rx="4" fill="#718096"/>
+
+  <!-- Piernas -->
+  <rect x="42" y="92" width="14" height="25" rx="7" fill="#E2E8F0"/>
+  <rect x="64" y="92" width="14" height="25" rx="7" fill="#E2E8F0"/>
+  <!-- Botas espaciales -->
+  <rect x="38" y="112" width="20" height="12" rx="5" fill="#5B4BCE"/>
+  <rect x="62" y="112" width="20" height="12" rx="5" fill="#5B4BCE"/>
+
+  <!-- Cuerpo / Traje espacial -->
+  <rect x="38" y="52" width="44" height="46" rx="14" fill="#F8F9FA" stroke="#CBD5E1" stroke-width="2"/>
+  <!-- Insignia en el pecho -->
+  <circle cx="50" cy="65" r="5" fill="#5B4BCE"/>
+  <polygon points="50,62 51,64 53,65 51,66 50,68 49,66 47,65 49,64" fill="#FFD166"/>
+  <!-- Cinturón -->
+  <rect x="38" y="82" width="44" height="6" fill="#5B4BCE"/>
+  <rect x="56" y="80" width="8" height="10" rx="2" fill="#FFD166"/>
+
+  <!-- Brazo izquierdo (apoyado) -->
+  <path d="M 38 56 C 26 62, 26 78, 32 82" stroke="#F8F9FA" stroke-width="12" stroke-linecap="round" fill="none"/>
+  <circle cx="32" cy="82" r="6" fill="#5B4BCE"/>
+
+  <!-- Brazo derecho (saludando a los niños!) -->
+  <path d="M 82 56 Q 98 44, 98 30" stroke="#F8F9FA" stroke-width="12" stroke-linecap="round" fill="none"/>
+  <!-- Guante saludando -->
+  <circle cx="98" cy="27" r="7" fill="#5B4BCE"/>
+  <!-- Dedito pulgar -->
+  <circle cx="92" cy="25" r="3" fill="#5B4BCE"/>
+
+  <!-- Casco espacial -->
+  <circle cx="60" cy="35" r="26" fill="#F8F9FA" stroke="#CBD5E1" stroke-width="2"/>
+  <!-- Visor dorado reflectante -->
+  <ellipse cx="60" cy="35" rx="19" ry="15" fill="url(#astroVisor)"/>
+  <!-- Reflejo blanco curvo en el visor -->
+  <path d="M 47 28 A 14 11 0 0 1 72 26 A 14 11 0 0 0 47 28 Z" fill="#FFFFFF" opacity="0.65"/>
+  <!-- Antena del casco -->
+  <line x1="60" y1="9" x2="60" y2="4" stroke="#CBD5E1" stroke-width="3"/>
+  <circle cx="60" cy="3" r="3.5" fill="#FFD166"/>
+</svg>

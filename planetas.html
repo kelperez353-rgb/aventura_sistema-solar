@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Conoce los 8 planetas del Sistema Solar y el Sol. Fichas didácticas y tabla comparativa para cuarto grado de primaria.">
+  <meta name="author" content="Kelsy Pérez">
+  <title>Aventura por el Sistema Solar | Los Planetas</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ======================================================================
+       ENCABEZADO Y BARRA DE NAVEGACIÓN
+       ====================================================================== -->
+  <header class="header-principal">
+    <div class="contenedor-nav">
+      <a href="index.html" class="logo-sitio" title="Inicio - Aventura por el Sistema Solar">
+        <img src="img/icono-planeta.svg" alt="Icono del Sistema Solar con anillos" width="46" height="46">
+        <div class="logo-texto">
+          <span class="logo-subtitulo-blanco">Aventura por el</span>
+          <span class="logo-titulo-amarillo">Sistema Solar</span>
+        </div>
+      </a>
+
+      <nav aria-label="Navegación principal">
+        <ul class="menu-navegacion">
+          <li><a href="index.html">🏠 Inicio</a></li>
+          <li><a href="planetas.html" class="active">🪐 Planetas</a></li>
+          <li><a href="galeria.html">🖼️ Galería</a></li>
+          <li><a href="evaluacion.html">⭐ Evalúate</a></li>
+          <li><a href="contacto.html">✉️ Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ======================================================================
+       CONTENIDO PRINCIPAL
+       ====================================================================== -->
+  <main class="main-contenido">
+
+    <!-- HERO DE LA SECCIÓN -->
+    <section class="hero-banner" aria-label="Introducción a los planetas">
+      <div class="hero-texto">
+        <span class="hero-etiqueta">Fichas Didácticas</span>
+        <h1>Explorando el Sol y los 8 Planetas</h1>
+        <p>
+          En el Sistema Solar no hay dos mundos iguales. Desde el calor infernal de Venus 
+          hasta los vientos helados de Neptuno, cada planeta guarda secretos fascinantes. 
+          ¡Conozcámoslos uno a uno en orden de viaje desde el Sol!
+        </p>
+      </div>
+      <div class="hero-imagen">
+        <img src="img/sol.svg" alt="El Sol brillante, el corazón del Sistema Solar">
+      </div>
+    </section>
+
+    <!-- EL SOL: LA ESTRELLA CENTRAL -->
+    <section class="seccion-bloque" aria-labelledby="titulo-sol">
+      <h2 id="titulo-sol">El Sol: Nuestra Estrella de Vida</h2>
+      <article class="tarjeta tarjeta-sol">
+        <div style="display: flex; gap: 2rem; align-items: center; flex-wrap: wrap;">
+          <div class="tarjeta-icono" style="width: 120px; height: 120px; flex-shrink: 0;">
+            <img src="img/sol.svg" alt="Ilustración radiante del Sol" style="max-width: 110px;">
+          </div>
+          <div style="flex: 1 1 300px;">
+            <span class="tarjeta-tipo" style="background-color: #E23E1D;">Estrella Enana Amarilla</span>
+            <h3>El Rey del Sistema Solar</h3>
+            <p>
+              El Sol no es un planeta, <strong>¡es una estrella!</strong> Es una gigantesca esfera de gas caliente que 
+              contiene más del 99% de toda la masa del Sistema Solar. Su enorme fuerza de gravedad mantiene a todos los 
+              planetas girando ordenadamente en sus órbitas.
+            </p>
+            <ul class="tarjeta-lista-datos">
+              <li><strong>Temperatura en la superficie:</strong> <span>Aprox. 5,500 °C</span></li>
+              <li><strong>Edad aproximada:</strong> <span>4,600 millones de años</span></li>
+              <li><strong>Importancia:</strong> <span>Brinda luz y calor indispensables para que existan plantas, animales y humanos.</span></li>
+            </ul>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- LOS CUATRO PLANETAS ROCOSOS (INTERIORES) -->
+    <section class="seccion-bloque" aria-labelledby="titulo-rocosos">
+      <h2 id="titulo-rocosos">Los 4 Planetas Rocosos (Interiores)</h2>
+      <p>
+        Están más cerca del Sol, tienen un tamaño más pequeño y están formados principalmente por roca sólida y metales:
+      </p>
+
+      <div class="grid-planetas">
+
+        <!-- MERCURIO -->
+        <article class="tarjeta">
+          <div class="tarjeta-icono">
+            <img src="img/mercurio.svg" alt="Planeta Mercurio de color gris">
+          </div>
+          <span class="tarjeta-tipo">1.° Planeta</span>
+          <h3>Mercurio</h3>
+          <div class="tarjeta-cuerpo">
+            <p>Es el planeta más veloz en orbitar al Sol (tarda solo 88 días terrestres). Es el más pequeño y está lleno de cráteres, pareciéndose mucho a nuestra Luna.</p>
+            <ul class="tarjeta-lista-datos">
+              <li><strong>Lunas:</strong> <span>0 (No tiene)</span></li>
+              <li><strong>Superficie:</strong> <span>Rocosa y con cráteres</span></li>
+              <li><strong>Dato clave:</strong> <span>No tiene atmósfera que retenga el calor.</span></li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- VENUS -->
+        <article class="tarjeta">
+          <div class="tarjeta-icono">
+            <img src="img/venus.svg" alt="Planeta Venus envuelto en nubes doradas">
+          </div>
+          <span class="tarjeta-tipo">2.° Planeta</span>
+          <h3>Venus</h3>
+          <div class="tarjeta-cuerpo">
+            <p>Conocido como el "gemelo de la Tierra" por su tamaño similar, pero es un horno: ¡es el planeta más caliente de todos por su efecto invernadero extremo!</p>
+            <ul class="tarjeta-lista-datos">
+              <li><strong>Lunas:</strong> <span>0 (No tiene)</span></li>
+              <li><strong>Temperatura:</strong> <span>¡Alrededor de 465 °C!</span></li>
+              <li><strong>Dato clave:</strong> <span>Gira en sentido contrario a la mayoría de planetas.</span></li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- LA TIERRA -->
+        <article class="tarjeta" style="border-color: #48CAE4;">
+          <div class="tarjeta-icono">
+            <img src="img/tierra.svg" alt="Planeta Tierra azul con continentes verdes">
+          </div>
+          <span class="tarjeta-tipo" style="background-color: #0077B6;">3.° Planeta</span>
+          <h3>Tierra</h3>
+          <div class="tarjeta-cuerpo">
+            <p>¡Nuestro increíble hogar! Se encuentra en la "zona habitable": ni muy cerca ni muy lejos del Sol, lo que permite que el agua exista en estado líquido.</p>
+            <ul class="tarjeta-lista-datos">
+              <li><strong>Lunas:</strong> <span>1 (La Luna)</span></li>
+              <li><strong>Atmósfera:</strong> <span>Rica en nitrógeno y oxígeno vital</span></li>
+              <li><strong>Dato clave:</strong> <span>70% de su superficie está cubierta de agua.</span></li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- MARTE -->
+        <article class="tarjeta">
+          <div class="tarjeta-icono">
+            <img src="img/marte.svg" alt="Planeta Marte de color rojo óxido">
+          </div>
+          <span class="tarjeta-tipo">4.° Planeta</span>
+          <h3>Marte</h3>
+          <div class="tarjeta-cuerpo">
+            <p>Apodado "El Planeta Rojo" debido al óxido de hierro en su suelo. Es el planeta más explorado por robots espaciales y tiene el volcán más alto conocido.</p>
+            <ul class="tarjeta-lista-datos">
+              <li><strong>Lunas:</strong> <span>2 (Fobos y Deimos)</span></li>
+              <li><strong>Volcán famoso:</strong> <span>Monte Olimpo (3 veces el Everest)</span></li>
+              <li><strong>Dato clave:</strong> <span>Tiene hielo de agua congelado en sus polos.</span></li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- LOS CUATRO PLANETAS GASEOSOS Y HELADOS (EXTERIORES) -->
+    <section class="seccion-bloque" aria-labelledby="titulo-gaseosos">
+      <h2 id="titulo-gaseosos">Los 4 Planetas Gaseosos y Helados (Exteriores)</h2>
+      <p>
+        Ubicados más allá del cinturón de asteroides, son colosos formados por hidrógeno, helio y metano congelado:
+      </p>
+
+      <div class="grid-planetas">
+
+        <!-- JÚPITER -->
+        <article class="tarjeta">
+          <div class="tarjeta-icono">
+            <img src="img/jupiter.svg" alt="Planeta Júpiter con franjas y la Gran Mancha Roja">
+          </div>
+          <span class="tarjeta-tipo">5.° Planeta</span>
+          <h3>Júpiter</h3>
+          <div class="tarjeta-cuerpo">
+            <p>El coloso del Sistema Solar: ¡es más del doble de grande que todos los demás planetas juntos! Es una inmensa bola de gas con tormentas feroces.</p>
+            <ul class="tarjeta-lista-datos">
+              <li><strong>Lunas:</strong> <span>95 lunas confirmadas</span></li>
+              <li><strong>Tormenta:</strong> <span>La Gran Mancha Roja</span></li>
+              <li><strong>Dato clave:</strong> <span>Gira tan rápido que su día dura menos de 10 horas.</span></li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- SATURNO -->
+        <article class="tarjeta">
+          <div class="tarjeta-icono">
+            <img src="img/saturno.svg" alt="Planeta Saturno con sus majestuosos anillos dorados">
+          </div>
+          <span class="tarjeta-tipo">6.° Planeta</span>
+          <h3>Saturno</h3>
+          <div class="tarjeta-cuerpo">
+            <p>Conocido como la "Joya del Sistema Solar" por su deslumbrante sistema de anillos formados por millones de partículas de hielo de agua y rocas.</p>
+            <ul class="tarjeta-lista-datos">
+              <li><strong>Lunas:</strong> <span>Más de 140 lunas conocidas</span></li>
+              <li><strong>Densidad:</strong> <span>¡Es tan liviano que flotaría en agua!</span></li>
+              <li><strong>Dato clave:</strong> <span>Tiene una luna llamada Titán con lagos y nubes.</span></li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- URANO -->
+        <article class="tarjeta">
+          <div class="tarjeta-icono">
+            <img src="img/urano.svg" alt="Planeta Urano de color azul verdoso con anillos verticales">
+          </div>
+          <span class="tarjeta-tipo">7.° Planeta</span>
+          <h3>Urano</h3>
+          <div class="tarjeta-cuerpo">
+            <p>Un gigante de hielo de hermoso color cian gracias al gas metano en su atmósfera. Es el único planeta que gira completamente "acostado" de lado.</p>
+            <ul class="tarjeta-lista-datos">
+              <li><strong>Lunas:</strong> <span>28 lunas conocidas</span></li>
+              <li><strong>Inclinación:</strong> <span>98 grados (rueda como pelota)</span></li>
+              <li><strong>Dato clave:</strong> <span>Tiene 13 anillos tenues casi verticales.</span></li>
+            </ul>
+          </div>
+        </article>
+
+        <!-- NEPTUNO -->
+        <article class="tarjeta">
+          <div class="tarjeta-icono">
+            <img src="img/neptuno.svg" alt="Planeta Neptuno de color azul profundo con vientos veloces">
+          </div>
+          <span class="tarjeta-tipo">8.° Planeta</span>
+          <h3>Neptuno</h3>
+          <div class="tarjeta-cuerpo">
+            <p>El planeta más alejado del Sol. Es un mundo oscuro y helado de color azul profundo, donde soplan los vientos más violentos de todo el Sistema Solar.</p>
+            <ul class="tarjeta-lista-datos">
+              <li><strong>Lunas:</strong> <span>16 lunas (la mayor es Tritón)</span></li>
+              <li><strong>Vientos:</strong> <span>Superan los 2,000 km/h</span></li>
+              <li><strong>Dato clave:</strong> <span>Tarda 165 años terrestres en dar una vuelta al Sol.</span></li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- TABLA COMPARATIVA DE DATOS ASTRONÓMICOS -->
+    <section class="seccion-bloque" aria-labelledby="titulo-tabla">
+      <h2 id="titulo-tabla">Tabla Resumen de los 8 Planetas</h2>
+      <p>Compara las características principales de los planetas en este cuadro de mando astronómico:</p>
+
+      <div class="contenedor-tabla">
+        <table class="tabla-astronomica">
+          <caption>Cuadro Comparativo: Características de los Planetas del Sistema Solar</caption>
+          <thead>
+            <tr>
+              <th scope="col">Planeta</th>
+              <th scope="col">Orden</th>
+              <th scope="col">Tipo de Planeta</th>
+              <th scope="col">Tiempo en dar vuelta al Sol (Año)</th>
+              <th scope="col">Número de Lunas</th>
+              <th scope="col">Dato Curioso Destacado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row"><strong>Mercurio</strong></th>
+              <td>1.°</td>
+              <td>Rocoso interior</td>
+              <td>88 días terrestres</td>
+              <td>0</td>
+              <td>No tiene atmósfera y está lleno de cráteres.</td>
+            </tr>
+            <tr>
+              <th scope="row"><strong>Venus</strong></th>
+              <td>2.°</td>
+              <td>Rocoso interior</td>
+              <td>225 días terrestres</td>
+              <td>0</td>
+              <td>Es el planeta más caliente de todos (465 °C).</td>
+            </tr>
+            <tr>
+              <th scope="row"><strong>Tierra</strong></th>
+              <td>3.°</td>
+              <td>Rocoso interior</td>
+              <td>365 días y 6 horas</td>
+              <td>1 (La Luna)</td>
+              <td>Único planeta conocido con agua líquida y vida.</td>
+            </tr>
+            <tr>
+              <th scope="row"><strong>Marte</strong></th>
+              <td>4.°</td>
+              <td>Rocoso interior</td>
+              <td>687 días terrestres</td>
+              <td>2 (Fobos, Deimos)</td>
+              <td>Color rojo por óxido y tiene el volcán Monte Olimpo.</td>
+            </tr>
+            <tr>
+              <th scope="row"><strong>Júpiter</strong></th>
+              <td>5.°</td>
+              <td>Gigante Gaseoso</td>
+              <td>12 años terrestres</td>
+              <td>95 confirmadas</td>
+              <td>El planeta más grande; tormenta Gran Mancha Roja.</td>
+            </tr>
+            <tr>
+              <th scope="row"><strong>Saturno</strong></th>
+              <td>6.°</td>
+              <td>Gigante Gaseoso</td>
+              <td>29 años terrestres</td>
+              <td>Más de 140</td>
+              <td>Fascinante sistema de anillos hechos de hielo y roca.</td>
+            </tr>
+            <tr>
+              <th scope="row"><strong>Urano</strong></th>
+              <td>7.°</td>
+              <td>Gigante Helado</td>
+              <td>84 años terrestres</td>
+              <td>28 conocidas</td>
+              <td>Gira inclinado casi 98° ("de lado").</td>
+            </tr>
+            <tr>
+              <th scope="row"><strong>Neptuno</strong></th>
+              <td>8.°</td>
+              <td>Gigante Helado</td>
+              <td>165 años terrestres</td>
+              <td>16 conocidas</td>
+              <td>Vientos supersónicos que superan 2,000 km/h.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- DICCIONARIO ASTRONÓMICO -->
+    <section class="seccion-bloque" aria-labelledby="titulo-vocabulario">
+      <h2 id="titulo-vocabulario">Palabras Claves del Espacio (Vocabulario de 4.° Grado)</h2>
+      <article class="caja-didactica caja-morada">
+        <dl>
+          <dt><strong style="color: #FFD166; font-size: 1.1rem;">🪐 Órbita:</strong></dt>
+          <dd style="margin-bottom: 1rem; margin-left: 1.2rem;">
+            Es el camino o trayectoria invisible en forma de curva que sigue un planeta para girar alrededor del Sol.
+          </dd>
+
+          <dt><strong style="color: #FFD166; font-size: 1.1rem;">🌍 Movimiento de Rotación:</strong></dt>
+          <dd style="margin-bottom: 1rem; margin-left: 1.2rem;">
+            Es cuando un planeta gira sobre su propio eje (como un trompo). En la Tierra dura 24 horas y da origen al <strong>día y la noche</strong>.
+          </dd>
+
+          <dt><strong style="color: #FFD166; font-size: 1.1rem;">🌞 Movimiento de Traslación:</strong></dt>
+          <dd style="margin-bottom: 1rem; margin-left: 1.2rem;">
+            Es el viaje que hace el planeta alrededor del Sol. En la Tierra dura 365 días (1 año) y genera las estaciones del año.
+          </dd>
+
+          <dt><strong style="color: #FFD166; font-size: 1.1rem;">🧲 Gravedad:</strong></dt>
+          <dd style="margin-bottom: 1rem; margin-left: 1.2rem;">
+            La fuerza de atracción que tienen los objetos con masa. Mantiene a la Tierra atada al Sol y a nosotros con los pies sobre la tierra.
+          </dd>
+
+          <dt><strong style="color: #FFD166; font-size: 1.1rem;">☁️ Atmósfera:</strong></dt>
+          <dd style="margin-left: 1.2rem;">
+            La capa de gases que rodea a un planeta, protegiéndolo de los rayos nocivos y de los meteoritos.
+          </dd>
+        </dl>
+      </article>
+    </section>
+
+  </main>
+
+  <!-- ======================================================================
+       PIE DE PÁGINA
+       ====================================================================== -->
+  <footer class="footer-landing">
+    <div class="footer-landing-barra">
+      <div class="footer-izq">
+        <img src="img/icono-planeta.svg" alt="Saturno miniatura">
+        <span>Aventura por el Sistema Solar</span>
+      </div>
+      <div class="footer-centro">
+        ★ ¡El universo también es tuyo! ★
+      </div>
+      <div class="footer-der">
+        <span>🪐 4.° grado | 9 a 10 años</span>
+      </div>
+    </div>
+    <div class="footer-acreditacion">
+      <p>
+        Proyecto Integrador de Tecnología Web I | Facultad de Informática, Electrónica y Comunicación | Universidad de Panamá (CRUV) — 2026.
+      </p>
+      <p>
+        Sitio desarrollado por <strong>Kelsy Pérez</strong> | <a href="mailto:kelperez353@gmail.com">kelperez353@gmail.com</a> | <a href="tel:+50769547750">+507 6954-7750</a>
+      </p>
+    </div>
+  </footer>
+
+</body>
+</html>

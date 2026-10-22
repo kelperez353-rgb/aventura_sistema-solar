@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <radialGradient id="moonGrad" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="60%" stop-color="#D9D9D9"/>
+      <stop offset="100%" stop-color="#8E9AAF"/>
+    </radialGradient>
+    <filter id="moonGlow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Resplandor lunar -->
+  <circle cx="50" cy="50" r="34" fill="#FFFFFF" opacity="0.15" filter="url(#moonGlow)"/>
+
+  <!-- Disco lunar -->
+  <circle cx="50" cy="50" r="30" fill="url(#moonGrad)"/>
+
+  <!-- Cráteres lunares (Mares y cráteres) -->
+  <!-- Cráter 1 -->
+  <circle cx="40" cy="38" r="5.5" fill="#7D8597" opacity="0.45"/>
+  <circle cx="41" cy="39" r="4.5" fill="#5C677D" opacity="0.35"/>
+  <!-- Cráter 2 -->
+  <circle cx="62" cy="45" r="4.5" fill="#7D8597" opacity="0.45"/>
+  <circle cx="63" cy="46" r="3.5" fill="#5C677D" opacity="0.35"/>
+  <!-- Cráter 3 -->
+  <circle cx="48" cy="62" r="7" fill="#7D8597" opacity="0.45"/>
+  <circle cx="49" cy="63" r="5.8" fill="#5C677D" opacity="0.35"/>
+  <!-- Cráter 4 y pequeños -->
+  <circle cx="34" cy="55" r="3" fill="#7D8597" opacity="0.4"/>
+  <circle cx="58" cy="30" r="2.5" fill="#7D8597" opacity="0.4"/>
+  <circle cx="64" cy="64" r="3" fill="#7D8597" opacity="0.4"/>
+
+  <!-- Brillo -->
+  <path d="M 32 35 A 28 28 0 0 1 56 22 A 28 28 0 0 0 32 35 Z" fill="#FFFFFF" opacity="0.5"/>
+</svg>

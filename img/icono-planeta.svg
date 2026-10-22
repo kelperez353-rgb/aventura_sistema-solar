@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <radialGradient id="ringPlanet" cx="40%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#FFF275"/>
+      <stop offset="60%" stop-color="#FFD166"/>
+      <stop offset="100%" stop-color="#F59E0B"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Estrellitas de acompañamiento -->
+  <polygon points="18,18 20,24 26,26 20,28 18,34 16,28 10,26 16,24" fill="#FFD166"/>
+  <polygon points="84,70 85,74 89,75 85,76 84,80 83,76 79,75 83,74" fill="#FFD166"/>
+
+  <!-- Anillo parte trasera -->
+  <ellipse cx="50" cy="50" rx="42" ry="12" fill="none" stroke="#5B4BCE" stroke-width="6" opacity="0.85" transform="rotate(-24 50 50)"/>
+
+  <!-- Esfera del planeta -->
+  <circle cx="50" cy="50" r="26" fill="url(#ringPlanet)"/>
+
+  <!-- Reflejo blanco curvo -->
+  <path d="M 36 34 A 20 20 0 0 1 58 30" stroke="#FFFFFF" stroke-width="3" stroke-linecap="round" fill="none" opacity="0.8"/>
+
+  <!-- Anillo parte frontal -->
+  <path d="M 12 50 A 42 12 0 0 0 88 50" fill="none" stroke="#5B4BCE" stroke-width="6" opacity="0.95" transform="rotate(-24 50 50)"/>
+</svg>

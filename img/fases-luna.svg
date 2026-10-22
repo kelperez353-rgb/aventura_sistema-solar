@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 160" width="100%" height="100%">
+  <defs>
+    <style>
+      .phase-text { font-family: 'Segoe UI', Arial, sans-serif; font-size: 13px; font-weight: bold; fill: #FFD166; text-anchor: middle; }
+      .phase-sub { font-family: 'Segoe UI', Arial, sans-serif; font-size: 11px; fill: #E0E6ED; text-anchor: middle; }
+    </style>
+  </defs>
+
+  <!-- 1. LUNA NUEVA -->
+  <g transform="translate(75, 55)">
+    <circle cx="0" cy="0" r="32" fill="#182654" stroke="#5B4BCE" stroke-width="2.5" stroke-dasharray="3,3"/>
+    <circle cx="0" cy="0" r="30" fill="#0C142E"/>
+    <!-- Brillo sutil de silueta -->
+    <circle cx="0" cy="0" r="30" fill="none" stroke="#5B4BCE" stroke-width="1.5" opacity="0.5"/>
+    <text x="0" y="55" class="phase-text">1. Luna Nueva</text>
+    <text x="0" y="72" class="phase-sub">No la vemos</text>
+  </g>
+
+  <!-- Flecha indicadora 1 -> 2 -->
+  <path d="M 125 55 L 165 55" stroke="#FFD166" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="4,4"/>
+  <polygon points="170,55 162,51 162,59" fill="#FFD166"/>
+
+  <!-- 2. CUARTO CRECIENTE -->
+  <g transform="translate(225, 55)">
+    <circle cx="0" cy="0" r="30" fill="#0C142E" stroke="#5B4BCE" stroke-width="1.5"/>
+    <!-- Parte iluminada (creciente derecha en forma de D) -->
+    <path d="M 0 -30 A 30 30 0 0 1 0 30 A 30 30 0 0 1 0 -30" fill="#F8F9FA"/>
+    <!-- Cráteres en la zona iluminada -->
+    <circle cx="12" cy="-6" r="3.5" fill="#C5CBD3" opacity="0.6"/>
+    <circle cx="16" cy="12" r="4" fill="#C5CBD3" opacity="0.6"/>
+    <text x="0" y="55" class="phase-text">2. Cuarto Creciente</text>
+    <text x="0" y="72" class="phase-sub">Forma de letra "D"</text>
+  </g>
+
+  <!-- Flecha indicadora 2 -> 3 -->
+  <path d="M 275 55 L 315 55" stroke="#FFD166" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="4,4"/>
+  <polygon points="320,55 312,51 312,59" fill="#FFD166"/>
+
+  <!-- 3. LUNA LLENA -->
+  <g transform="translate(375, 55)">
+    <circle cx="0" cy="0" r="34" fill="#FFD166" opacity="0.2"/>
+    <circle cx="0" cy="0" r="30" fill="#FFFFFF"/>
+    <!-- Cráteres -->
+    <circle cx="-10" cy="-8" r="4.5" fill="#D9D9D9"/>
+    <circle cx="8" cy="-5" r="3.5" fill="#D9D9D9"/>
+    <circle cx="0" cy="12" r="6" fill="#D9D9D9"/>
+    <circle cx="-14" cy="8" r="2.5" fill="#D9D9D9"/>
+    <circle cx="15" cy="14" r="3" fill="#D9D9D9"/>
+    <text x="0" y="55" class="phase-text">3. Luna Llena</text>
+    <text x="0" y="72" class="phase-sub">100% brillante</text>
+  </g>
+
+  <!-- Flecha indicadora 3 -> 4 -->
+  <path d="M 425 55 L 465 55" stroke="#FFD166" stroke-width="2.5" stroke-linecap="round" stroke-dasharray="4,4"/>
+  <polygon points="470,55 462,51 462,59" fill="#FFD166"/>
+
+  <!-- 4. CUARTO MENGUANTE -->
+  <g transform="translate(525, 55)">
+    <circle cx="0" cy="0" r="30" fill="#0C142E" stroke="#5B4BCE" stroke-width="1.5"/>
+    <!-- Parte iluminada (menguante izquierda en forma de C) -->
+    <path d="M 0 -30 A 30 30 0 0 0 0 30 A 30 30 0 0 0 0 -30" fill="#F8F9FA"/>
+    <!-- Cráteres en la zona iluminada -->
+    <circle cx="-12" cy="-6" r="3.5" fill="#C5CBD3" opacity="0.6"/>
+    <circle cx="-16" cy="12" r="4" fill="#C5CBD3" opacity="0.6"/>
+    <text x="0" y="55" class="phase-text">4. Cuarto Menguante</text>
+    <text x="0" y="72" class="phase-sub">Forma de letra "C"</text>
+  </g>
+</svg>

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <!-- Estrellitas brillantes del cielo -->
+  <polygon points="76,14 78,19 83,21 78,23 76,28 74,23 69,21 74,19" fill="#FFD166"/>
+  <polygon points="30,22 31,25 34,26 31,27 30,30 29,27 26,26 29,25" fill="#FFD166"/>
+  <polygon points="86,40 87,43 90,44 87,45 86,48 85,45 82,44 85,43" fill="#FFD166"/>
+
+  <!-- Trípode (patas) -->
+  <line x1="48" y1="58" x2="26" y2="90" stroke="#5B4BCE" stroke-width="4.5" stroke-linecap="round"/>
+  <line x1="50" y1="58" x2="50" y2="90" stroke="#4838B5" stroke-width="4.5" stroke-linecap="round"/>
+  <line x1="52" y1="58" x2="74" y2="90" stroke="#5B4BCE" stroke-width="4.5" stroke-linecap="round"/>
+  <!-- Unión central del trípode -->
+  <circle cx="50" cy="58" r="5" fill="#FFD166"/>
+
+  <!-- Tubo del telescopio inclinado -->
+  <g transform="rotate(-38 50 50)">
+    <!-- Ocular trasero -->
+    <rect x="22" y="47" width="8" height="6" rx="2" fill="#FFD166"/>
+    <!-- Tubo estrecho -->
+    <rect x="30" y="45" width="18" height="10" rx="2" fill="#5B4BCE"/>
+    <!-- Tubo ancho principal -->
+    <rect x="48" y="42" width="30" height="16" rx="3" fill="#3B82F6"/>
+    <!-- Banda decorativa -->
+    <rect x="62" y="42" width="5" height="16" fill="#FFD166"/>
+    <!-- Lente frontal -->
+    <rect x="78" y="40" width="5" height="20" rx="2" fill="#5B4BCE"/>
+    <!-- Brillo del lente -->
+    <line x1="80" y1="44" x2="80" y2="52" stroke="#FFF" stroke-width="2" stroke-linecap="round"/>
+  </g>
+</svg>

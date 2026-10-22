@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 280" width="100%" height="100%">
+  <defs>
+    <radialGradient id="sunHero" cx="0%" cy="50%" r="60%">
+      <stop offset="0%" stop-color="#FFF275"/>
+      <stop offset="40%" stop-color="#FFD166"/>
+      <stop offset="80%" stop-color="#F77F00"/>
+      <stop offset="100%" stop-color="#D62828"/>
+    </radialGradient>
+    <style>
+      .planet-lbl { font-family: 'Segoe UI', Arial, sans-serif; font-size: 11px; font-weight: bold; fill: #FFD166; text-anchor: middle; }
+      .orbit-line { stroke: #2A3B75; stroke-width: 1.5; stroke-dasharray: 4,4; fill: none; }
+      .category-tag { font-family: 'Segoe UI', Arial, sans-serif; font-size: 10px; font-weight: bold; fill: #A0AEC0; text-anchor: middle; }
+    </style>
+  </defs>
+
+  <!-- Órbitas elípticas centradas en el Sol -->
+  <ellipse cx="20" cy="140" rx="140" ry="85" class="orbit-line"/>
+  <ellipse cx="20" cy="140" rx="210" ry="105" class="orbit-line"/>
+  <ellipse cx="20" cy="140" rx="290" ry="115" class="orbit-line"/>
+  <ellipse cx="20" cy="140" rx="370" ry="122" class="orbit-line"/>
+  <!-- Cinturón de asteroides -->
+  <path d="M 425 20 Q 445 140, 425 260" stroke="#FFD166" stroke-width="1.5" stroke-dasharray="1,7" opacity="0.4" fill="none"/>
+  <text x="435" y="18" class="category-tag" fill="#FFD166">Cinturón de Asteroides</text>
+  <!-- Planetas exteriores -->
+  <ellipse cx="20" cy="140" rx="495" ry="128" class="orbit-line"/>
+  <ellipse cx="20" cy="140" rx="630" ry="133" class="orbit-line"/>
+  <ellipse cx="20" cy="140" rx="745" ry="136" class="orbit-line"/>
+  <ellipse cx="20" cy="140" rx="840" ry="138" class="orbit-line"/>
+
+  <!-- EL SOL -->
+  <circle cx="20" cy="140" r="105" fill="url(#sunHero)"/>
+  <text x="45" y="145" class="planet-lbl" font-size="14" fill="#101B3F">EL SOL</text>
+
+  <!-- 1. MERCURIO -->
+  <g transform="translate(160, 140)">
+    <circle cx="0" cy="0" r="8" fill="#8D99AE"/>
+    <text x="0" y="24" class="planet-lbl">Mercurio</text>
+  </g>
+
+  <!-- 2. VENUS -->
+  <g transform="translate(230, 140)">
+    <circle cx="0" cy="0" r="12" fill="#E17055"/>
+    <text x="0" y="27" class="planet-lbl">Venus</text>
+  </g>
+
+  <!-- 3. TIERRA -->
+  <g transform="translate(310, 140)">
+    <circle cx="0" cy="0" r="13" fill="#0077B6"/>
+    <!-- Pequeña Luna orbitando -->
+    <circle cx="18" cy="-10" r="3.5" fill="#E2E8F0"/>
+    <text x="0" y="28" class="planet-lbl">Tierra</text>
+  </g>
+
+  <!-- 4. MARTE -->
+  <g transform="translate(390, 140)">
+    <circle cx="0" cy="0" r="10" fill="#E23E1D"/>
+    <text x="0" y="25" class="planet-lbl">Marte</text>
+  </g>
+
+  <!-- 5. JÚPITER -->
+  <g transform="translate(515, 140)">
+    <circle cx="0" cy="0" r="32" fill="#E0A96D"/>
+    <!-- Franja y mancha -->
+    <path d="M -30 2 Q 0 0, 30 2" stroke="#8C4A16" stroke-width="5" fill="none"/>
+    <ellipse cx="14" cy="8" rx="5" ry="3" fill="#C0392B"/>
+    <text x="0" y="47" class="planet-lbl">Júpiter</text>
+  </g>
+
+  <!-- 6. SATURNO -->
+  <g transform="translate(650, 140)">
+    <!-- Anillo -->
+    <ellipse cx="0" cy="0" rx="42" ry="10" fill="none" stroke="#FFD166" stroke-width="4.5" transform="rotate(-15)"/>
+    <circle cx="0" cy="0" r="22" fill="#E5C158"/>
+    <!-- Anillo frontal -->
+    <path d="M -41 0 A 42 10 0 0 0 41 0" fill="none" stroke="#FFD166" stroke-width="4.5" transform="rotate(-15)"/>
+    <text x="0" y="40" class="planet-lbl">Saturno</text>
+  </g>
+
+  <!-- 7. URANO -->
+  <g transform="translate(765, 140)">
+    <!-- Anillo vertical tenue -->
+    <ellipse cx="0" cy="0" rx="5" ry="24" fill="none" stroke="#FFF" stroke-width="1.8" opacity="0.6"/>
+    <circle cx="0" cy="0" r="16" fill="#48CAE4"/>
+    <text x="0" y="34" class="planet-lbl">Urano</text>
+  </g>
+
+  <!-- 8. NEPTUNO -->
+  <g transform="translate(860, 140)">
+    <circle cx="0" cy="0" r="15" fill="#3A0CA3"/>
+    <circle cx="0" cy="0" r="15" fill="none" stroke="#4895EF" stroke-width="1.5"/>
+    <text x="0" y="33" class="planet-lbl">Neptuno</text>
+  </g>
+
+  <!-- División Rocosos vs Gaseosos abajo -->
+  <rect x="140" y="240" width="270" height="24" rx="12" fill="#5B4BCE" opacity="0.3"/>
+  <text x="275" y="256" class="category-tag" fill="#FFD166">PLANETAS ROCOSOS (INTERIORES)</text>
+
+  <rect x="470" y="240" width="410" height="24" rx="12" fill="#5B4BCE" opacity="0.3"/>
+  <text x="675" y="256" class="category-tag" fill="#FFD166">PLANETAS GASEOSOS Y HELADOS (EXTERIORES)</text>
+</svg>

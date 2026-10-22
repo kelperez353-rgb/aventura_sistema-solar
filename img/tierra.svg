@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <radialGradient id="earthOceans" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#48CAE4"/>
+      <stop offset="60%" stop-color="#0077B6"/>
+      <stop offset="100%" stop-color="#03045E"/>
+    </radialGradient>
+    <clipPath id="earthClip">
+      <circle cx="50" cy="50" r="35"/>
+    </clipPath>
+  </defs>
+  <!-- Atmósfera exterior con oxígeno -->
+  <circle cx="50" cy="50" r="38" fill="#48CAE4" opacity="0.3"/>
+  <!-- Océanos -->
+  <circle cx="50" cy="50" r="35" fill="url(#earthOceans)"/>
+  <!-- Continentes en verde -->
+  <g clip-path="url(#earthClip)">
+    <!-- América del Norte y Central -->
+    <path d="M 28 25 C 32 23, 38 27, 42 32 C 40 37, 33 42, 35 48 C 30 46, 26 38, 25 32 Z" fill="#2EC4B6"/>
+    <!-- América del Sur -->
+    <path d="M 34 50 C 39 52, 45 56, 43 65 C 41 73, 37 78, 35 75 C 32 68, 31 56, 34 50 Z" fill="#2EC4B6"/>
+    <!-- Europa y África -->
+    <path d="M 52 28 C 58 26, 64 30, 62 36 C 58 35, 54 36, 52 32 Z" fill="#2EC4B6"/>
+    <path d="M 53 40 C 62 38, 70 45, 68 56 C 65 65, 58 72, 54 68 C 50 60, 48 48, 53 40 Z" fill="#2EC4B6"/>
+    <!-- Asia y Oceanía -->
+    <path d="M 68 28 C 76 26, 84 32, 80 44 C 74 46, 72 38, 68 35 Z" fill="#2EC4B6"/>
+    <path d="M 72 58 C 78 57, 82 62, 79 67 C 75 69, 71 65, 72 58 Z" fill="#2EC4B6"/>
+    <!-- Nubes blancas suaves -->
+    <path d="M 20 38 Q 35 34, 45 40 Q 55 46, 70 38" stroke="#FFFFFF" stroke-width="4" stroke-linecap="round" fill="none" opacity="0.6"/>
+    <path d="M 30 68 Q 45 64, 60 70 Q 70 74, 80 66" stroke="#FFFFFF" stroke-width="3.5" stroke-linecap="round" fill="none" opacity="0.6"/>
+  </g>
+  <!-- Brillo superficial -->
+  <path d="M 28 32 A 32 32 0 0 1 58 18 A 32 32 0 0 0 28 32 Z" fill="#FFFFFF" opacity="0.35"/>
+</svg>

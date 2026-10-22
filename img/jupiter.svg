@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <radialGradient id="jupGrad" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#FCEADE"/>
+      <stop offset="50%" stop-color="#E0A96D"/>
+      <stop offset="100%" stop-color="#7C3E1D"/>
+    </radialGradient>
+    <clipPath id="jupClip">
+      <circle cx="50" cy="50" r="40"/>
+    </clipPath>
+  </defs>
+  <!-- Planeta Júpiter -->
+  <circle cx="50" cy="50" r="40" fill="url(#jupGrad)"/>
+  <!-- Bandas atmosféricas -->
+  <g clip-path="url(#jupClip)">
+    <path d="M 5 22 Q 50 18, 95 22 L 95 28 Q 50 24, 5 28 Z" fill="#C27D38" opacity="0.8"/>
+    <path d="M 5 34 Q 50 30, 95 34 L 95 40 Q 50 36, 5 40 Z" fill="#8C4A16" opacity="0.85"/>
+    <path d="M 5 44 Q 50 40, 95 44 L 95 50 Q 50 46, 5 50 Z" fill="#FFE0B2" opacity="0.6"/>
+    <path d="M 5 56 Q 50 52, 95 56 L 95 64 Q 50 60, 5 64 Z" fill="#A0522D" opacity="0.8"/>
+    <path d="M 5 70 Q 50 66, 95 70 L 95 76 Q 50 72, 5 76 Z" fill="#D2995F" opacity="0.7"/>
+    <!-- La Gran Mancha Roja (tormenta gigante) -->
+    <ellipse cx="68" cy="62" rx="9" ry="5.5" fill="#C0392B"/>
+    <ellipse cx="68" cy="62" rx="6" ry="3.5" fill="#E74C3C"/>
+    <circle cx="68" cy="62" r="1.5" fill="#FADBD8"/>
+  </g>
+  <!-- Brillo -->
+  <path d="M 24 32 A 38 38 0 0 1 60 14 A 38 38 0 0 0 24 32 Z" fill="#FFFFFF" opacity="0.3"/>
+</svg>

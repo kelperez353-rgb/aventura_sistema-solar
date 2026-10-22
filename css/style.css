@@ -1,0 +1,1085 @@
+/* ==========================================================================
+   AVENTURA POR EL SISTEMA SOLAR - HOJA DE ESTILOS CSS3
+   Proyecto Integrador: Tecnología Web I - Universidad de Panamá
+   Público Objetivo: Niños de 4to Grado (9 a 10 años)
+   Referencia Visual: Landing Page Espacial Amigable y Didáctica
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. VARIABLES CSS (PALETA OFICIAL)
+   -------------------------------------------------------------------------- */
+:root {
+  /* Paleta oficial requerida */
+  --color-fondo: #101B3F;               /* Azul oscuro espacial */
+  --color-morado: #5B4BCE;              /* Botones y títulos destacados */
+  --color-amarillo: #FFD166;            /* Detalles, estrellas e ilustraciones */
+
+  /* Colores de soporte para landing page */
+  --color-espacio-oscuro: #0c1430;      /* Gradiente de fondo espacial */
+  --color-fondo-tarjeta: #182654;       /* Fondo de tarjetas oscuras */
+  --color-fondo-suave: #20336E;         /* Hover y bloques */
+  --color-borde: #2A3B75;               /* Bordes y divisores */
+  --color-borde-brillante: #FFD166;     /* Borde resaltado */
+
+  --color-texto-principal: #FFFFFF;     /* Texto blanco alto contraste */
+  --color-texto-suave: #E2E8F0;         /* Texto descriptivo claro */
+  --color-texto-oscuro: #101B3F;        /* Texto en tarjetas claras y botones */
+  --color-texto-gris: #475569;          /* Texto en tarjetas blancas */
+
+  /* Colores de las 4 tarjetas de la Landing Page */
+  --tarjeta-purpura-bg: #F3F0FF;
+  --tarjeta-purpura-borde: #E9D5FF;
+  --tarjeta-amarilla-bg: #FEF9C3;
+  --tarjeta-amarilla-borde: #FDE68A;
+  --tarjeta-lavanda-bg: #F5F3FF;
+  --tarjeta-lavanda-borde: #DDD6FE;
+  --tarjeta-azul-bg: #E0F2FE;
+  --tarjeta-azul-borde: #BAE6FD;
+  --boton-azul-bg: #38BDF8;
+
+  --color-morado-hover: #4838B5;
+  --color-amarillo-hover: #F8C349;
+  --color-azul-hover: #0284C7;
+
+  /* Tipografía legible para niños */
+  --fuente-principal: 'Segoe UI', system-ui, -apple-system, BlinkMacSystemFont, 'Quicksand', 'Nunito', sans-serif;
+  --radio-borde: 20px;
+  --radio-pill: 9999px;
+  --sombra-tarjeta: 0 10px 25px rgba(0, 0, 0, 0.12);
+  --sombra-landing: 0 12px 30px rgba(16, 27, 63, 0.08);
+  --transicion: all 0.3s ease;
+}
+
+/* --------------------------------------------------------------------------
+   2. REINICIO Y ESTILOS BASE
+   -------------------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: var(--fuente-principal);
+  background-color: var(--color-fondo);
+  color: var(--color-texto-suave);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Enlaces */
+a {
+  color: var(--color-amarillo);
+  text-decoration: none;
+  transition: var(--transicion);
+}
+
+a:hover, a:focus-visible {
+  color: #FFFFFF;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Encabezados */
+h1, h2, h3, h4 {
+  font-weight: 800;
+  line-height: 1.25;
+}
+
+h1 {
+  font-size: 2.6rem;
+  color: var(--color-texto-principal);
+}
+
+h2 {
+  font-size: 2rem;
+  color: var(--color-amarillo);
+  margin-bottom: 1rem;
+}
+
+h3 {
+  font-size: 1.35rem;
+  color: var(--color-texto-principal);
+}
+
+p {
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
+}
+
+/* --------------------------------------------------------------------------
+   3. ENCABEZADO Y BARRA DE NAVEGACIÓN (IDÉNTICO A LA REFERENCIA)
+   -------------------------------------------------------------------------- */
+.header-principal {
+  background-color: var(--color-fondo);
+  border-bottom: 2px solid rgba(91, 75, 206, 0.4);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.45);
+}
+
+.contenedor-nav {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0.9rem 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+/* Logotipo */
+.logo-sitio {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  text-decoration: none;
+}
+
+.logo-sitio img {
+  height: 46px;
+  width: auto;
+}
+
+.logo-texto {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-subtitulo-blanco {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  line-height: 1.1;
+  letter-spacing: 0.2px;
+}
+
+.logo-titulo-amarillo {
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: var(--color-amarillo);
+  line-height: 1.1;
+  letter-spacing: 0.5px;
+}
+
+/* Menú de Navegación con píldoras e iconos */
+.menu-navegacion {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  gap: 0.6rem;
+}
+
+.menu-navegacion li a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.6rem 1.15rem;
+  font-weight: 700;
+  font-size: 0.98rem;
+  color: var(--color-texto-suave);
+  background-color: transparent;
+  border-radius: var(--radio-pill);
+  border: 1px solid transparent;
+  text-decoration: none;
+  transition: var(--transicion);
+}
+
+.menu-navegacion li a:hover {
+  background-color: rgba(91, 75, 206, 0.35);
+  color: #FFFFFF;
+  border-color: rgba(255, 209, 102, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Píldora activa exactamente como la imagen */
+.menu-navegacion li a.active {
+  background-color: var(--color-morado);
+  color: #FFFFFF;
+  border-color: rgba(255, 209, 102, 0.6);
+  box-shadow: 0 4px 12px rgba(91, 75, 206, 0.5);
+}
+
+/* --------------------------------------------------------------------------
+   4. HERO BANNER DE LA LANDING PAGE (ESPACIO CÓSMICO Y SISTEMA SOLAR)
+   -------------------------------------------------------------------------- */
+.hero-landing-wrapper {
+  background: radial-gradient(circle at 75% 40%, #172554 0%, #101B3F 60%, #0a1128 100%);
+  padding: 3.5rem 1.8rem 4rem 1.8rem;
+  position: relative;
+  overflow: hidden;
+  border-bottom: 3px solid var(--color-morado);
+}
+
+/* Estrellas decorativas nativas */
+.hero-landing-wrapper::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: 
+    radial-gradient(2px 2px at 30px 40px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 120px 80px, #FFD166, rgba(0,0,0,0)),
+    radial-gradient(1.5px 1.5px at 280px 140px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 450px 60px, #FFD166, rgba(0,0,0,0)),
+    radial-gradient(1.5px 1.5px at 620px 180px, #ffffff, rgba(0,0,0,0)),
+    radial-gradient(2px 2px at 850px 90px, #FFD166, rgba(0,0,0,0));
+  background-size: 500px 300px;
+  pointer-events: none;
+}
+
+.hero-landing-contenedor {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-landing-texto {
+  flex: 0 1 480px;
+}
+
+.hero-landing-texto h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 1.15;
+  margin-bottom: 1.2rem;
+  color: #FFFFFF;
+}
+
+.hero-landing-texto h1 .texto-amarillo {
+  color: var(--color-amarillo);
+  display: block;
+}
+
+.hero-landing-texto p {
+  font-size: 1.15rem;
+  color: #CBD5E1;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.hero-landing-imagen {
+  flex: 1 1 680px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-landing-imagen img {
+  width: 100%;
+  max-width: 720px;
+  filter: drop-shadow(0 15px 30px rgba(0,0,0,0.4));
+  animation: flotacionEspacial 6s ease-in-out infinite alternate;
+}
+
+@keyframes flotacionEspacial {
+  0% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(0.5deg); }
+  100% { transform: translateY(0px) rotate(0deg); }
+}
+
+/* Botones en píldora con flechas */
+.btn-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 0.75rem 2rem;
+  border-radius: var(--radio-pill);
+  font-weight: 800;
+  font-size: 1.05rem;
+  cursor: pointer;
+  transition: var(--transicion);
+  border: none;
+  text-decoration: none;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+  font-family: var(--fuente-principal);
+}
+
+.btn-pill-morado {
+  background-color: var(--color-morado);
+  color: #FFFFFF;
+}
+
+.btn-pill-morado:hover {
+  background-color: var(--color-morado-hover);
+  color: #FFFFFF;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(91, 75, 206, 0.5);
+  text-decoration: none;
+}
+
+.btn-pill-amarillo {
+  background-color: var(--color-amarillo);
+  color: var(--color-texto-oscuro);
+}
+
+.btn-pill-amarillo:hover {
+  background-color: var(--color-amarillo-hover);
+  color: #000000;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(255, 209, 102, 0.45);
+  text-decoration: none;
+}
+
+.btn-pill-azul {
+  background-color: var(--boton-azul-bg);
+  color: #082F49;
+}
+
+.btn-pill-azul:hover {
+  background-color: #0284C7;
+  color: #FFFFFF;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(56, 189, 248, 0.45);
+  text-decoration: none;
+}
+
+/* --------------------------------------------------------------------------
+   5. SECCIÓN DE LAS 4 TARJETAS CLARAS (EXACTAMENTE COMO LA REFERENCIA)
+   -------------------------------------------------------------------------- */
+.seccion-tarjetas-landing {
+  background-color: #FFFFFF;
+  padding: 3.5rem 1.8rem 4.5rem 1.8rem;
+  color: var(--color-texto-oscuro);
+}
+
+.contenedor-tarjetas-landing {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.grid-tarjetas-landing {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.6rem;
+}
+
+/* Tarjeta individual estilo cartoon pastel */
+.tarjeta-landing {
+  border-radius: 22px;
+  padding: 2.2rem 1.5rem 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: var(--transicion);
+  box-shadow: var(--sombra-landing);
+}
+
+.tarjeta-landing:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
+}
+
+/* Colores específicos de cada tarjeta según la imagen de referencia */
+.tarjeta-purpura {
+  background-color: var(--tarjeta-purpura-bg);
+  border: 2px solid var(--tarjeta-purpura-borde);
+}
+
+.tarjeta-amarilla {
+  background-color: var(--tarjeta-amarilla-bg);
+  border: 2px solid var(--tarjeta-amarilla-borde);
+}
+
+.tarjeta-lavanda {
+  background-color: var(--tarjeta-lavanda-bg);
+  border: 2px solid var(--tarjeta-lavanda-borde);
+}
+
+.tarjeta-azul {
+  background-color: var(--tarjeta-azul-bg);
+  border: 2px solid var(--tarjeta-azul-borde);
+}
+
+/* Iconos de las tarjetas */
+.tarjeta-landing-icono {
+  width: 82px;
+  height: 82px;
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tarjeta-landing-icono img {
+  max-width: 76px;
+  max-height: 76px;
+  transition: transform 0.3s ease;
+}
+
+.tarjeta-landing:hover .tarjeta-landing-icono img {
+  transform: scale(1.12);
+}
+
+/* Textos de las tarjetas */
+.tarjeta-landing h3 {
+  font-size: 1.45rem;
+  font-weight: 800;
+  color: #101B3F;
+  margin-bottom: 0.8rem;
+}
+
+.tarjeta-landing p {
+  font-size: 0.98rem;
+  color: var(--color-texto-gris);
+  line-height: 1.5;
+  margin-bottom: 1.8rem;
+  flex: 1;
+}
+
+/* --------------------------------------------------------------------------
+   6. CONTENIDO CURRICULAR DE CIENCIAS NATURALES (PARA 4.° GRADO)
+   -------------------------------------------------------------------------- */
+.seccion-curricular-landing {
+  background-color: var(--color-fondo);
+  padding: 4rem 1.8rem;
+  border-top: 3px solid var(--color-morado);
+}
+
+.contenedor-curricular {
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.titulo-centrado {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.titulo-centrado h2 {
+  font-size: 2.2rem;
+  color: var(--color-amarillo);
+}
+
+.titulo-centrado p {
+  color: #CBD5E1;
+  font-size: 1.15rem;
+  max-width: 700px;
+  margin: 0.5rem auto 0 auto;
+}
+
+/* --------------------------------------------------------------------------
+   7. FOOTER BAR (IDÉNTICO A LA REFERENCIA)
+   -------------------------------------------------------------------------- */
+.footer-landing {
+  background-color: var(--color-fondo);
+  border-top: 2px solid rgba(91, 75, 206, 0.4);
+  padding: 1.2rem 1.8rem;
+}
+
+.footer-landing-barra {
+  max-width: 1240px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer-izq {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  font-size: 0.95rem;
+}
+
+.footer-izq img {
+  height: 28px;
+  width: auto;
+}
+
+.footer-centro {
+  font-weight: 800;
+  color: var(--color-amarillo);
+  font-size: 1.05rem;
+  letter-spacing: 0.5px;
+}
+
+.footer-der {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: rgba(91, 75, 206, 0.3);
+  border: 1px solid var(--color-morado);
+  padding: 0.35rem 0.9rem;
+  border-radius: var(--radio-pill);
+  font-size: 0.88rem;
+  color: #CBD5E1;
+  font-weight: 700;
+}
+
+.footer-acreditacion {
+  max-width: 1240px;
+  margin: 1.5rem auto 0 auto;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-borde);
+  text-align: center;
+  font-size: 0.85rem;
+  color: #94A3B8;
+}
+
+/* --------------------------------------------------------------------------
+   8. ESTILOS DE PÁGINAS INTERNAS (PLANETAS, GALERÍA, EVALUACIÓN, CONTACTO)
+   -------------------------------------------------------------------------- */
+.main-contenido {
+  flex: 1;
+  max-width: 1240px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2.5rem 1.8rem 4rem 1.8rem;
+}
+
+.seccion-bloque {
+  margin-bottom: 3.5rem;
+}
+
+.hero-banner {
+  background: linear-gradient(135deg, rgba(91, 75, 206, 0.4) 0%, rgba(24, 38, 84, 0.85) 100%);
+  border: 2px solid var(--color-borde);
+  border-radius: var(--radio-borde);
+  padding: 2.5rem 2rem;
+  margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+.hero-etiqueta {
+  display: inline-block;
+  background-color: var(--color-morado);
+  color: var(--color-amarillo);
+  padding: 0.35rem 0.9rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  border: 1px solid var(--color-amarillo);
+}
+
+.grid-tarjetas, .grid-planetas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.8rem;
+  margin-top: 1.5rem;
+}
+
+.tarjeta {
+  background-color: var(--color-fondo-tarjeta);
+  border: 2px solid var(--color-borde);
+  border-radius: var(--radio-borde);
+  padding: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  transition: var(--transicion);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+
+.tarjeta:hover {
+  transform: translateY(-6px);
+  border-color: var(--color-amarillo);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5), 0 0 14px rgba(255, 209, 102, 0.2);
+}
+
+.tarjeta-icono {
+  width: 90px;
+  height: 90px;
+  margin: 0 auto 1.2rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tarjeta-icono img {
+  max-width: 85px;
+  max-height: 85px;
+  transition: transform 0.4s ease;
+}
+
+.tarjeta:hover .tarjeta-icono img {
+  transform: scale(1.12) rotate(4deg);
+}
+
+.tarjeta h3 {
+  text-align: center;
+  color: var(--color-amarillo);
+  margin-bottom: 0.5rem;
+  font-size: 1.35rem;
+}
+
+.tarjeta-tipo {
+  display: block;
+  text-align: center;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #CBD5E1;
+  background-color: var(--color-morado);
+  padding: 0.25rem 0.6rem;
+  border-radius: 12px;
+  margin: 0 auto 1rem auto;
+  width: fit-content;
+}
+
+.tarjeta-cuerpo {
+  flex: 1;
+}
+
+.tarjeta-cuerpo p {
+  font-size: 0.98rem;
+  color: var(--color-texto-suave);
+}
+
+.tarjeta-lista-datos {
+  list-style: none;
+  margin: 1rem 0;
+  border-top: 1px dashed var(--color-borde);
+  padding-top: 0.8rem;
+  font-size: 0.92rem;
+}
+
+.tarjeta-lista-datos li {
+  margin-bottom: 0.4rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.tarjeta-lista-datos strong {
+  color: var(--color-amarillo);
+}
+
+.tarjeta-sol {
+  border-color: #FFD166;
+  background: linear-gradient(180deg, rgba(255, 209, 102, 0.15) 0%, var(--color-fondo-tarjeta) 100%);
+}
+
+.caja-didactica {
+  background-color: var(--color-fondo-tarjeta);
+  border-left: 6px solid var(--color-amarillo);
+  border-radius: 0 var(--radio-borde) var(--radio-borde) 0;
+  padding: 1.5rem 1.8rem;
+  margin: 2rem 0;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+
+.caja-didactica h3 {
+  color: var(--color-amarillo);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.8rem;
+}
+
+.caja-morada {
+  border-left-color: var(--color-morado);
+  background-color: rgba(91, 75, 206, 0.15);
+}
+
+.caja-morada h3 {
+  color: #A594F9;
+}
+
+.comparador-bloque {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.columna-comparador {
+  background-color: var(--color-fondo-tarjeta);
+  border: 2px solid var(--color-borde);
+  border-radius: var(--radio-borde);
+  padding: 1.8rem;
+}
+
+.columna-comparador h3 {
+  color: var(--color-amarillo);
+  border-bottom: 2px solid var(--color-morado);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.columna-comparador ol, .caja-didactica ul {
+  margin-left: 1.4rem;
+  margin-top: 0.5rem;
+}
+
+.columna-comparador li, .caja-didactica li {
+  margin-bottom: 0.5rem;
+}
+
+/* Tabla comparativa */
+.contenedor-tabla {
+  overflow-x: auto;
+  margin: 2rem 0;
+  border-radius: var(--radio-borde);
+  border: 2px solid var(--color-borde);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+}
+
+.tabla-astronomica {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  background-color: var(--color-fondo-tarjeta);
+  font-size: 0.95rem;
+}
+
+.tabla-astronomica caption {
+  caption-side: top;
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: var(--color-amarillo);
+  padding: 0.8rem 1rem;
+  background-color: var(--color-fondo);
+  text-align: left;
+  border-bottom: 2px solid var(--color-borde);
+}
+
+.tabla-astronomica th {
+  background-color: var(--color-morado);
+  color: #FFFFFF;
+  padding: 0.9rem 1.1rem;
+  font-weight: 800;
+}
+
+.tabla-astronomica td {
+  padding: 0.85rem 1.1rem;
+  border-bottom: 1px solid var(--color-borde);
+  color: var(--color-texto-suave);
+}
+
+.tabla-astronomica tr:nth-child(even) {
+  background-color: rgba(32, 51, 110, 0.4);
+}
+
+.tabla-astronomica tr:hover {
+  background-color: rgba(91, 75, 206, 0.25);
+}
+
+/* Galería multimedia */
+.galeria-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.8rem;
+  margin-top: 1.5rem;
+}
+
+.galeria-item {
+  background-color: var(--color-fondo-tarjeta);
+  border: 2px solid var(--color-borde);
+  border-radius: var(--radio-borde);
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  transition: var(--transicion);
+  display: flex;
+  flex-direction: column;
+}
+
+.galeria-item:hover {
+  border-color: var(--color-amarillo);
+  transform: translateY(-5px);
+}
+
+.galeria-item figure {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.galeria-img-contenedor {
+  background-color: #0b132b;
+  padding: 1.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 180px;
+}
+
+.galeria-img-contenedor img {
+  max-height: 140px;
+  width: auto;
+  transition: transform 0.3s ease;
+}
+
+.galeria-item:hover .galeria-img-contenedor img {
+  transform: scale(1.08);
+}
+
+.galeria-item figcaption {
+  padding: 1.2rem;
+  background-color: var(--color-fondo-tarjeta);
+  flex: 1;
+}
+
+.galeria-item figcaption h4 {
+  color: var(--color-amarillo);
+  font-size: 1.15rem;
+  margin-bottom: 0.4rem;
+}
+
+.galeria-item figcaption p {
+  font-size: 0.92rem;
+  margin-bottom: 0.5rem;
+}
+
+.banner-fases {
+  background-color: var(--color-fondo-tarjeta);
+  border: 2px solid var(--color-morado);
+  border-radius: var(--radio-borde);
+  padding: 1.8rem;
+  margin: 2rem 0;
+  text-align: center;
+}
+
+.banner-fases h3 {
+  color: var(--color-amarillo);
+  margin-bottom: 1rem;
+}
+
+.banner-fases img {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* Formularios */
+.formulario-contenedor {
+  background-color: var(--color-fondo-tarjeta);
+  border: 2px solid var(--color-borde);
+  border-radius: var(--radio-borde);
+  padding: 2.2rem 2.5rem;
+  margin: 2rem 0;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.35);
+}
+
+.formulario-espacial fieldset {
+  border: 2px solid var(--color-morado);
+  border-radius: var(--radio-borde);
+  padding: 1.8rem 1.8rem;
+  margin-bottom: 2rem;
+  background-color: rgba(16, 27, 63, 0.4);
+}
+
+.formulario-espacial legend {
+  padding: 0.4rem 1rem;
+  color: var(--color-amarillo);
+  font-size: 1.2rem;
+  font-weight: 800;
+  background-color: var(--color-morado);
+  border-radius: 8px;
+  border: 1px solid var(--color-amarillo);
+}
+
+.campo-grupo {
+  margin-bottom: 1.4rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.campo-grupo label {
+  font-weight: 700;
+  color: #FFFFFF;
+  font-size: 1rem;
+}
+
+.campo-grupo .ayuda-campo {
+  font-size: 0.85rem;
+  color: #CBD5E1;
+}
+
+.input-control, 
+.select-control, 
+.textarea-control {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  background-color: #0b132b;
+  border: 2px solid var(--color-borde);
+  border-radius: 8px;
+  color: #FFFFFF;
+  font-family: var(--fuente-principal);
+  font-size: 1rem;
+  transition: var(--transicion);
+}
+
+.input-control:focus, 
+.select-control:focus, 
+.textarea-control:focus {
+  outline: none;
+  border-color: var(--color-amarillo);
+  box-shadow: 0 0 10px rgba(255, 209, 102, 0.4);
+  background-color: #101c40;
+}
+
+.textarea-control {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.grupo-opciones {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.opcion-label {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: rgba(32, 51, 110, 0.4);
+  padding: 0.65rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--color-borde);
+  cursor: pointer;
+  transition: var(--transicion);
+  font-size: 1rem;
+  color: var(--color-texto-suave);
+}
+
+.opcion-label:hover {
+  background-color: rgba(91, 75, 206, 0.3);
+  border-color: var(--color-amarillo);
+  color: #FFFFFF;
+}
+
+.opcion-label input[type="radio"],
+.opcion-label input[type="checkbox"] {
+  width: 20px;
+  height: 20px;
+  accent-color: var(--color-morado);
+  cursor: pointer;
+}
+
+.acciones-formulario {
+  display: flex;
+  gap: 1.2rem;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.curiosidades-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.curiosidad-card {
+  background-color: var(--color-fondo-tarjeta);
+  border: 2px dashed var(--color-morado);
+  border-radius: var(--radio-borde);
+  padding: 1.5rem;
+  position: relative;
+}
+
+.curiosidad-card .icono-curioso {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.curiosidad-card h4 {
+  color: var(--color-amarillo);
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+/* --------------------------------------------------------------------------
+   9. MEDIA QUERIES (RESPONSIVE)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .grid-tarjetas-landing {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .hero-landing-contenedor {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-landing-texto {
+    flex: 1 1 100%;
+    max-width: 650px;
+  }
+
+  .hero-landing-texto h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-landing-imagen {
+    flex: 1 1 100%;
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .contenedor-nav {
+    flex-direction: column;
+    text-align: center;
+    padding: 0.8rem 1rem;
+  }
+
+  .menu-navegacion {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.4rem;
+  }
+
+  .menu-navegacion li a {
+    padding: 0.5rem 0.85rem;
+    font-size: 0.9rem;
+  }
+
+  .footer-landing-barra {
+    flex-direction: column;
+    text-align: center;
+    gap: 0.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid-tarjetas-landing {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-landing-texto h1 {
+    font-size: 2rem;
+  }
+
+  .btn-pill {
+    width: 100%;
+  }
+
+  .acciones-formulario {
+    flex-direction: column;
+  }
+}

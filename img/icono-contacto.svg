@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <!-- Hoja de carta saliendo del sobre -->
+  <rect x="26" y="22" width="48" height="34" rx="4" fill="#FFFFFF" stroke="#CBD5E1" stroke-width="2"/>
+  <!-- Líneas de texto de la carta -->
+  <line x1="34" y1="30" x2="66" y2="30" stroke="#93C5FD" stroke-width="2.5" stroke-linecap="round"/>
+  <line x1="34" y1="38" x2="58" y2="38" stroke="#93C5FD" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Sobre frontal en azul vibrante -->
+  <!-- Base del sobre -->
+  <rect x="18" y="38" width="64" height="44" rx="8" fill="#3B82F6"/>
+
+  <!-- Solapas plegadas del sobre -->
+  <path d="M 18 38 L 50 62 L 82 38" fill="none" stroke="#1D4ED8" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 18 82 L 42 56" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M 82 82 L 58 56" fill="none" stroke="#2563EB" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Sello / Adorno corazón o estrella -->
+  <circle cx="50" cy="62" r="5" fill="#FFD166"/>
+</svg>

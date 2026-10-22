@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <defs>
+    <radialGradient id="uraGrad" cx="35%" cy="35%" r="65%">
+      <stop offset="0%" stop-color="#E0FBFC"/>
+      <stop offset="50%" stop-color="#98E2E6"/>
+      <stop offset="85%" stop-color="#48CAE4"/>
+      <stop offset="100%" stop-color="#0096C7"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Anillo vertical trasero (gira de lado) -->
+  <ellipse cx="50" cy="50" rx="9" ry="44" fill="none" stroke="#E0FBFC" stroke-width="2.5" opacity="0.4" transform="rotate(12 50 50)"/>
+
+  <!-- Brillo gaseoso exterior -->
+  <circle cx="50" cy="50" r="32" fill="#98E2E6" opacity="0.2"/>
+
+  <!-- Planeta Urano -->
+  <circle cx="50" cy="50" r="28" fill="url(#uraGrad)"/>
+
+  <!-- Anillo vertical frontal -->
+  <path d="M 50 6 A 9 44 0 0 1 50 94" fill="none" stroke="#FFFFFF" stroke-width="2.5" opacity="0.65" transform="rotate(12 50 50)"/>
+
+  <!-- Brillo -->
+  <path d="M 34 36 A 26 26 0 0 1 58 24 A 26 26 0 0 0 34 36 Z" fill="#FFFFFF" opacity="0.45"/>
+</svg>
